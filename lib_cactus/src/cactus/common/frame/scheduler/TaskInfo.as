@@ -1,6 +1,15 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.frame.scheduler
 {
 
+	/**
+	 * 
+	 * @author Peng
+	 */
 	public class TaskInfo
 	{
 		public var pTask:ITask;

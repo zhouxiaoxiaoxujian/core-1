@@ -1,6 +1,15 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.frame.ai
 {
 
+	/**
+	 * AI对象互相沟通使用的消息（电文）
+	 * @author Peng
+	 */
 	public class AITelegram
 	{
 		/**

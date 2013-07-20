@@ -1,10 +1,7 @@
 /**
- * Copyright (c) 2010 supperhpxd@yahoo.com.cn
- *
- *
- * @author     Peng
- * @version
- **/
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com see the LICENCE.txt
+ */
 package cactus.common.factory
 {
 	import flash.filters.ColorMatrixFilter;
@@ -16,10 +13,10 @@ package cactus.common.factory
 	 */
 	public class ColorTransformFactory
 	{
-		private static var defaultColorTransform:ColorTransform = new ColorTransform(1, 1, 1);
-		private static var defaultColorTransformWhenMove:ColorTransform = new ColorTransform(1, 1, 1, .5);
-		private static var redTransform:ColorTransform = new ColorTransform(1, 0, 0, .5);
-		private static var blackAndWhiteTransform:ColorTransform = new ColorTransform(1, 0, 0, .5);
+		private static var defaultColorTransform : ColorTransform = new ColorTransform(1, 1, 1);
+		private static var defaultColorTransformWhenMove : ColorTransform = new ColorTransform(1, 1, 1, .5);
+		private static var redTransform : ColorTransform = new ColorTransform(1, 0, 0, .5);
+		private static var blackAndWhiteTransform : ColorTransform = new ColorTransform(1, 0, 0, .5);
 
 		public function ColorTransformFactory()
 		{
@@ -29,7 +26,7 @@ package cactus.common.factory
 		 * 默认原色变换
 		 * @return
 		 */
-		public static function createDefaultColorTransform():ColorTransform
+		public static function createDefaultColorTransform() : ColorTransform
 		{
 			return defaultColorTransform;
 		}
@@ -38,7 +35,7 @@ package cactus.common.factory
 		 * 带有透明度的默认原色变换
 		 * @return
 		 */
-		public static function createDefaultColorTransformWhenMove():ColorTransform
+		public static function createDefaultColorTransformWhenMove() : ColorTransform
 		{
 			return defaultColorTransformWhenMove;
 		}
@@ -47,7 +44,7 @@ package cactus.common.factory
 		 * 红色变换
 		 * @return
 		 */
-		public static function createRedColorTransform():ColorTransform
+		public static function createRedColorTransform() : ColorTransform
 		{
 			return redTransform;
 		}
@@ -56,7 +53,7 @@ package cactus.common.factory
 		 * 黑白变换
 		 * @return
 		 */
-		public static function createBlackAndWhiteTransform():ColorTransform
+		public static function createBlackAndWhiteTransform() : ColorTransform
 		{
 			return blackAndWhiteTransform;
 		}
@@ -65,12 +62,12 @@ package cactus.common.factory
 		 * 黑白滤镜
 		 * @return
 		 */
-		public static function createBlackAndWhiteFilter():ColorMatrixFilter
+		public static function createBlackAndWhiteFilter() : ColorMatrixFilter
 		{
 //			用颜色矩阵滤镜
-			var red:Number = 0.3086;
-			var green:Number = 0.694;
-			var blue:Number = 0.0820; //这三个值是提供标准的黑白效果
+			var red : Number = 0.3086;
+			var green : Number = 0.694;
+			var blue : Number = 0.0820; //这三个值是提供标准的黑白效果
 			return new ColorMatrixFilter([red, green, blue, 0, 0, red, green, blue, 0, 0, red, green, blue, 0, 0, 0, 0, 0, 1, 0]);
 		}
 

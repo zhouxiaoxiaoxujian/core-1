@@ -1,3 +1,8 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.frame.interfaces
 {
 
@@ -7,12 +12,12 @@ package cactus.common.frame.interfaces
 	 */
 	public interface IDisplayObject
 	{
-		function get x():Number;
+		function get x() : Number;
 
-		function set x(value:Number):void;
+		function set x(value : Number) : void;
 
-		function get y():Number;
+		function get y() : Number;
 
-		function set y(value:Number):void;
+		function set y(value : Number) : void;
 	}
 }

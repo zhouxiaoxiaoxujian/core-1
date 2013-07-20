@@ -1,4 +1,9 @@
-﻿package cactus.common.manager
+﻿/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
+package cactus.common.manager
 {
 	import flash.display.Stage;
 	import flash.events.Event;

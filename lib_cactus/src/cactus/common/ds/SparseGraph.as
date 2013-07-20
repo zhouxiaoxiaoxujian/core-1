@@ -1,3 +1,8 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.ds
 {
 	import flash.utils.ByteArray;

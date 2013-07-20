@@ -1,8 +1,17 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.ds.abs
 {
 	import cactus.common.ds.GraphNodeData;
 	import cactus.common.xx.goem.Vector2D;
 
+	/**
+	 * 
+	 * @author Peng
+	 */
 	public interface IGraphNode
 	{
 		function get id():uint

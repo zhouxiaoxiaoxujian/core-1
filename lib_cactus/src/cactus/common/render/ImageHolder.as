@@ -1,3 +1,8 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.render
 {
 	import flash.display.Loader;
@@ -11,11 +16,11 @@ package cactus.common.render
 	 */
 	public class ImageHolder extends Sprite
 	{
-		private var loader:Loader
-		private var _width:int;
-		private var _height:int;
+		private var loader : Loader
+		private var _width : int;
+		private var _height : int;
 
-		public function ImageHolder(url:String, $width:int, $height:int)
+		public function ImageHolder(url : String, $width : int, $height : int)
 		{
 			super();
 			_width = $width;
@@ -24,13 +29,13 @@ package cactus.common.render
 			loader = new Loader();
 
 			configureListeners(loader.contentLoaderInfo);
-			var request:URLRequest = new URLRequest(url);
+			var request : URLRequest = new URLRequest(url);
 			loader.load(request);
 			addChild(loader);
 
 		}
 
-		public function destory():void
+		public function destory() : void
 		{
 			loader.contentLoaderInfo.removeEventListener(Event.COMPLETE, completeHandler);
 			loader.contentLoaderInfo.removeEventListener(HTTPStatusEvent.HTTP_STATUS, httpStatusHandler);
@@ -41,7 +46,7 @@ package cactus.common.render
 			loader.contentLoaderInfo.removeEventListener(Event.UNLOAD, unLoadHandler);
 		}
 
-		private function configureListeners(dispatcher:IEventDispatcher):void
+		private function configureListeners(dispatcher : IEventDispatcher) : void
 		{
 			dispatcher.addEventListener(Event.COMPLETE, completeHandler);
 			dispatcher.addEventListener(HTTPStatusEvent.HTTP_STATUS, httpStatusHandler);
@@ -52,33 +57,33 @@ package cactus.common.render
 			dispatcher.addEventListener(Event.UNLOAD, unLoadHandler);
 		}
 
-		private function completeHandler(event:Event):void
+		private function completeHandler(event : Event) : void
 		{
 			loader.width = _width;
 			loader.height = _height;
 		}
 
-		private function httpStatusHandler(event:HTTPStatusEvent):void
+		private function httpStatusHandler(event : HTTPStatusEvent) : void
 		{
 		}
 
-		private function initHandler(event:Event):void
+		private function initHandler(event : Event) : void
 		{
 		}
 
-		private function ioErrorHandler(event:IOErrorEvent):void
+		private function ioErrorHandler(event : IOErrorEvent) : void
 		{
 		}
 
-		private function openHandler(event:Event):void
+		private function openHandler(event : Event) : void
 		{
 		}
 
-		private function progressHandler(event:ProgressEvent):void
+		private function progressHandler(event : ProgressEvent) : void
 		{
 		}
 
-		private function unLoadHandler(event:Event):void
+		private function unLoadHandler(event : Event) : void
 		{
 		}
 

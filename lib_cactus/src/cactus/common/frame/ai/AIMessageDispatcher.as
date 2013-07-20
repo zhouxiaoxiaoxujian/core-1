@@ -1,8 +1,17 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.frame.ai
 {
 	import flash.utils.clearTimeout;
 	import flash.utils.setTimeout;
 
+	/**
+	 * AI对象之间发送消息派发器
+	 * @author Peng
+	 */
 	public class AIMessageDispatcher
 	{
 		private static var _instance : AIMessageDispatcher = new AIMessageDispatcher;

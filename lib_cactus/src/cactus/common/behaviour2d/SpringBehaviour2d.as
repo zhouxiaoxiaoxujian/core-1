@@ -1,6 +1,10 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.behaviour2d
 {
-	import cactus.common.frame.interfaces.IVehicle;
 	import cactus.common.xx.sprite.Vehicle;
 
 	/**
@@ -13,35 +17,35 @@ package cactus.common.behaviour2d
 		/**
 		 * 弹簧系数 y=kx的k
 		 */
-		private var _spring:Number=0.01;
-		/** 
+		private var _spring : Number = 0.01;
+		/**
 		 * 摩擦力
 		 */
-		private var _friction:Number=1;
+		private var _friction : Number = 1;
 		/**
 		 * 目标x
 		 */
-		private var _targetX:Number;
+		private var _targetX : Number;
 		/**
 		 * 目标y
 		 */
-		private var _targetY:Number;
+		private var _targetY : Number;
 
-		public function SpringBehaviour2d($owner:Vehicle)
+		public function SpringBehaviour2d($owner : Vehicle)
 		{
 			super($owner);
 		}
 
 		/**
-		 * 弹簧运动 
+		 * 弹簧运动
 		 */
-		public function springV():void
+		public function springV() : void
 		{
-			var dx:Number = targetX - owner.x
-			var dy:Number = targetY - owner.y;
+			var dx : Number = targetX - owner.x
+			var dy : Number = targetY - owner.y;
 
-			var ax:Number = dx * spring;
-			var ay:Number = dy * spring;
+			var ax : Number = dx * spring;
+			var ay : Number = dy * spring;
 
 			owner.velocity.x += ax;
 			owner.velocity.y += ay;
@@ -49,45 +53,45 @@ package cactus.common.behaviour2d
 			owner.velocity.x *= friction;
 			owner.velocity.y *= friction;
 		}
-		
-		public function get targetY():Number
+
+		public function get targetY() : Number
 		{
 			return _targetY;
 		}
 
-		public function set targetY(value:Number):void
+		public function set targetY(value : Number) : void
 		{
-			_targetY=value;
+			_targetY = value;
 		}
 
-		public function get targetX():Number
+		public function get targetX() : Number
 		{
 			return _targetX;
 		}
 
-		public function set targetX(value:Number):void
+		public function set targetX(value : Number) : void
 		{
-			_targetX=value;
+			_targetX = value;
 		}
 
-		public function get friction():Number
+		public function get friction() : Number
 		{
 			return _friction;
 		}
 
-		public function set friction(value:Number):void
+		public function set friction(value : Number) : void
 		{
-			_friction=value;
+			_friction = value;
 		}
 
-		public function get spring():Number
+		public function get spring() : Number
 		{
 			return _spring;
 		}
 
-		public function set spring(value:Number):void
+		public function set spring(value : Number) : void
 		{
-			_spring=value;
+			_spring = value;
 		}
 
 	}

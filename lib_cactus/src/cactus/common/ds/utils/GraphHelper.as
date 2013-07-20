@@ -1,3 +1,8 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.ds.utils
 {
 	import cactus.common.ds.GraphEdge;
@@ -8,8 +13,6 @@ package cactus.common.ds.utils
 
 	/**
 	 * 图工具类
-	 *
-	 *
 	 * @author Peng
 	 */
 	public class GraphHelper
@@ -28,20 +31,21 @@ package cactus.common.ds.utils
 		 * @param xTileCount		x方向的格子数
 		 * @param yTileCount		y方向的格子数
 		 */
-		public static function createGrid(graph:IGraph, tileWidth:int, tileHeight:int, xTileCount:int, yTileCount:int):IGraph
+		public static function createGrid(graph : IGraph, tileWidth : int, tileHeight : int, xTileCount : int, yTileCount : int) : IGraph
 		{
 			// 创建2D网格
-			for (var row:int = 0; row < yTileCount; row++)
+			for (var row : int = 0; row < yTileCount; row++)
 			{
-				for (var col:int = 0; col < xTileCount; col++)
+				for (var col : int = 0; col < xTileCount; col++)
 				{
-					graph.addNode(new GraphNode(graph.getNextFreeNodeIndex(), new Vector2D(row * tileHeight + tileWidth / 2, col * tileWidth + tileHeight / 2)));
+					graph.addNode(new GraphNode(graph.getNextFreeNodeIndex(), new Vector2D(row * tileHeight + tileWidth /
+						2, col * tileWidth + tileHeight / 2)));
 				}
 			}
 
 			// 初始化所有的边
 			// @TBD 写法需要改变
-			var index:int = 0;
+			var index : int = 0;
 			for (row = 0; row < yTileCount; ++row)
 			{
 				for (col = 0; col < xTileCount; ++col)
@@ -72,7 +76,7 @@ package cactus.common.ds.utils
 		 * @param terrain
 		 * @param id
 		 */
-		public static function updateGraphFromBrush(graph:IGraph, terrain:int, id:uint):void
+		public static function updateGraphFromBrush(graph : IGraph, terrain : int, id : uint) : void
 		{
 			// 如果地形是阻塞，需要删除节点
 			if (terrain == 1)
@@ -108,20 +112,20 @@ package cactus.common.ds.utils
 		 * @param xTileCount	图的x方向宽度
 		 * @param yTileCount	图的y方向宽度
 		 */
-		private static function add8NeighboursToGridNode(graph:IGraph, row:uint, col:uint, xTileCount:uint, yTileCount:uint):void
+		private static function add8NeighboursToGridNode(graph : IGraph, row : uint, col : uint, xTileCount : uint, yTileCount : uint) : void
 		{
 			// 当前结点的位置
-			var posNode:Vector2D = graph.getNode(row * xTileCount + col).position;
+			var posNode : Vector2D = graph.getNode(row * xTileCount + col).position;
 
 			// 加入一条边
-			var newEdge:IGraphEdge
+			var newEdge : IGraphEdge
 
-			for (var i:int = -1; i < 2; ++i)
+			for (var i : int = -1; i < 2; ++i)
 			{
-				for (var j:int = -1; j < 2; ++j)
+				for (var j : int = -1; j < 2; ++j)
 				{
-					var nodeX:int = col + j;
-					var nodeY:int = row + i;
+					var nodeX : int = col + j;
+					var nodeY : int = row + i;
 
 					// 如果是当前节点本身，则跳过
 					if ((i == 0) && (j == 0))
@@ -131,10 +135,10 @@ package cactus.common.ds.utils
 					if (validNeighbour(nodeX, nodeY, xTileCount, yTileCount))
 					{
 						// 正在处理的当前节点的邻居
-						var posNeighbour:Vector2D = graph.getNode(nodeY * xTileCount + nodeX).position;
+						var posNeighbour : Vector2D = graph.getNode(nodeY * xTileCount + nodeX).position;
 
 						// @TBD 优化点，如果是为了处理路径代价，则可以使用不开方的数据
-						var dist:Number = posNode.dist(posNeighbour);
+						var dist : Number = posNode.dist(posNeighbour);
 
 						newEdge = new GraphEdge(row * xTileCount + col, nodeY * xTileCount + nodeX, dist);
 						graph.addEdge(newEdge);
@@ -159,7 +163,7 @@ package cactus.common.ds.utils
 		 * @param yTileCount
 		 * @return 如果合法返回true
 		 */
-		private static function validNeighbour(x:int, y:int, xTileCount:int, yTileCount:int):Boolean
+		private static function validNeighbour(x : int, y : int, xTileCount : int, yTileCount : int) : Boolean
 		{
 			return !((x < 0) || (x >= xTileCount) || (y < 0) || (y >= yTileCount));
 		}

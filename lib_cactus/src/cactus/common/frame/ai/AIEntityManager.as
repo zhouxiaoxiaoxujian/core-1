@@ -1,7 +1,16 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.frame.ai
 {
 	import cactus.common.tools.util.ArrayHash;
 
+	/**
+	 * AI对象管理器
+	 * @author Peng
+	 */
 	public class AIEntityManager
 	{
 		private static var _instance : AIEntityManager = new AIEntityManager;

@@ -1,3 +1,8 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.manager
 {
 	import flash.display.Sprite;
@@ -7,6 +12,10 @@ package cactus.common.manager
 
 	import mx.modules.ModuleManager;
 
+	/**
+	 * 应用程序关键对象管理
+	 * @author Peng
+	 */
 	public class AppManager extends EventDispatcher
 	{
 		/**

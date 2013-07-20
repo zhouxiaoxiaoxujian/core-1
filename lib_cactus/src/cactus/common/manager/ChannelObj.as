@@ -1,10 +1,15 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.manager
 {
 	import flash.media.SoundChannel;
 	
 	/**
 	 * 通道记录 
-	 * @author Pengx
+	 * @author Peng
 	 * 
 	 */
 	internal class ChannelObj

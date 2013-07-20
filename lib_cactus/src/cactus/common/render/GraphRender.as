@@ -1,3 +1,8 @@
+/**
+ * Cactus Game Lib
+ * Copyright (c) 2013 Cactus, http://www.flbuddy.com , see the LICENCE.txt
+ *
+ */
 package cactus.common.render
 {
 	import flash.display.Graphics;
@@ -18,15 +23,15 @@ package cactus.common.render
 		 * 图
 		 * @default
 		 */
-		private var _graph:IGraph;
+		private var _graph : IGraph;
 		/**
 		 * 图节点半径
 		 * @default
 		 */
-		private var _graphNodeRadius:Number;
+		private var _graphNodeRadius : Number;
 
 
-		public function GraphRender($graph:IGraph, $graphNodeRadius:Number = 5)
+		public function GraphRender($graph : IGraph, $graphNodeRadius : Number = 5)
 		{
 			_graph = $graph;
 			_graphNodeRadius = $graphNodeRadius;
@@ -36,15 +41,15 @@ package cactus.common.render
 		 * 渲染
 		 * @param isStatic	true，代表只渲染一次
 		 */
-		override public function draw():void
+		override public function draw() : void
 		{
 			if (_willRender)
 			{
 				// 渲染节点
-				var g:Graphics = paper.graphics;
+				var g : Graphics = paper.graphics;
 				g.beginFill(0x000000, 0.6);
 
-				for each (var node:IGraphNode in _graph.getNodes())
+				for each (var node : IGraphNode in _graph.getNodes())
 				{
 					if (node)
 					{
@@ -56,11 +61,11 @@ package cactus.common.render
 
 				// 渲染边
 				g.lineStyle(1, 0x000000);
-				var tmpPos:Vector2D;
+				var tmpPos : Vector2D;
 
-				for each (var edgeVec:Vector.<IGraphEdge> in _graph.getEdges())
+				for each (var edgeVec : Vector.<IGraphEdge> in _graph.getEdges())
 				{
-					for each (var edge:IGraphEdge in edgeVec)
+					for each (var edge : IGraphEdge in edgeVec)
 					{
 						tmpPos = _graph.getNode(edge.from).position;
 						g.moveTo(tmpPos.x, tmpPos.y);
