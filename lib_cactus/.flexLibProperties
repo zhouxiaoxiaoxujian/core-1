@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<flexLibProperties includeAllClasses="true" useMultiPlatformConfig="false" version="3">
+  <includeClasses>
+    <classEntry path="cactus.common.render.GridRender"/>
+    <classEntry path="cactus.common.render.BaseRender"/>
+    <classEntry path="cactus.common.render.GraphRender"/>
+    <classEntry path="cactus.common.tools.util.CloneUtil"/>
+    <classEntry path="cactus.common.tools.Hook"/>
+    <classEntry path="cactus.common.control.LanguageSelectBox"/>
+    <classEntry path="cactus.common.frame.scheduler.Clock"/>
+    <classEntry path="cactus.common.frame.scheduler.Scheduler"/>
+    <classEntry path="cactus.common.frame.scheduler.TaskInfo"/>
+    <classEntry path="cactus.common.frame.scheduler.ITask"/>
+    <classEntry path="cactus.common.frame.scheduler.TaskType"/>
+    <classEntry path="cactus.common.frame.scheduler.TraceTask"/>
+    <classEntry path="cactus.common.tools.Utils"/>
+    <classEntry path="cactus.common.manager.ComboManager"/>
+    <classEntry path="cactus.common.xx.formation.formula.LineFormula"/>
+    <classEntry path="cactus.common.xx.formation.formula.QuadraticFormula"/>
+    <classEntry path="cactus.common.resource.IResourceHelper"/>
+    <classEntry path="cactus.common.frame.ai.IAIObject"/>
+    <classEntry path="cactus.common.frame.ai.AIEntityManager"/>
+    <classEntry path="cactus.common.frame.ai.AIMessageDispatcher"/>
+    <classEntry path="cactus.common.frame.ai.AITelegram"/>
+  </includeClasses>
+  <includeResources/>
+  <namespaceManifests/>
+</flexLibProperties>

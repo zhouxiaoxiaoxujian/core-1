@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<lang name="zh-CN" ver="2008.6.9">
+		<node name="system">
+			<text label="sys_loading">正在加载...</text>
+		</node>
+
+		<node name="shop">
+			<text label="shop_item1_normal">更多的苹果！</text>
+			<text label="shop_item2_normal">更强的触地弹力！</text>
+			<text label="shop_item3_normal">抵御邪恶势力的撞击！</text>
+			<text label="shop_item4_normal">道具4</text>
+			<text label="shop_item5_normal">道具5</text>
+			<text label="shop_item6_normal">道具6</text>
+
+			<text label="shop_item1_selected">卸载该道具</text>
+			<text label="shop_item2_selected">卸载该道具</text>
+			<text label="shop_item3_selected">卸载该道具</text>
+			<text label="shop_item4_selected">卸载该道具</text>
+			<text label="shop_item5_selected">卸载该道具</text>
+			<text label="shop_item6_selected">卸载该道具</text>
+
+			<text label="shop_default_tip">点击下面的图标，可以选择道具哦！</text>
+			<text label="shop_need_fly_distance">需要飞行</text>
+		</node>
+	</lang>
+
+
+	<lang name="en" ver="2008.6.9">
+		<node name="system">
+			<text label="sys_loading">loading...</text>
+		</node>
+
+		<node name="shop">
+			<text label="shop_item1_normal">More Apples #n#</text>
+			<text label="shop_item2_normal">Better Bounce #n#</text>
+			<text label="shop_item3_normal">Armor #n#</text>
+			<text label="shop_item4_normal">prop4</text>
+			<text label="shop_item5_normal">prop5</text>
+			<text label="shop_item6_normal">prop6</text>
+
+			<text label="shop_item1_selected">deselect it</text>
+			<text label="shop_item2_selected">deselect it</text>
+			<text label="shop_item3_selected">deselect it</text>
+			<text label="shop_item4_selected">deselect it</text>
+			<text label="shop_item5_selected">deselect it</text>
+			<text label="shop_item6_selected">deselect it</text>
+
+			<text label="shop_default_tip">Welcome to Shop ^_^</text>
+			<text label="shop_need_fly_distance">need fly more</text>
+		</node>
+	</lang>
+</root>

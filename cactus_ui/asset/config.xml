@@ -1,0 +1,11 @@
+<config>
+	<resourcePath root="../asset/"/>
+	<resources path="res">
+		<resource name="cactus_ui_res" src="cactus_ui_res.swf" type="swf" weight="0" relateList="base"/>
+		
+		<resource name="lang" src="lang.xml" type="txt" weight="0" relateList="base"/>
+		
+		<resource name="cactus_ppt_res" src="cactus_ppt_res.swf" type="swf" weight="0" relateList="base"/>
+		<resource name="cactus_dy" src="cactus_dy.swf" type="swf" weight="0" relateList="Demo6_UI"/>
+	</resources>
+</config>
