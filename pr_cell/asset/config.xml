@@ -1,0 +1,6 @@
+<config>
+	<resourcePath root="../asset/"/>
+	<resources path="res">
+		<resource name="res" src="res.swf" type="swf" weight="0" relateList="base"/>
+	</resources>
+</config>
