@@ -98,10 +98,10 @@ function createBaseClass(postFix){
   code+="\r\npublic function "+$class+"(src:*=null){super(src)}\r\n\r\n"
   
   // 需要绑定的变量
-  code+=" override public function getBindObj():Array {return"
-  createBindProperties();
-  code+=";\r\n"
-  code+="}\r\n"
+  // code+=" override public function getBindObj():Array {return"
+  // createBindProperties();
+  // code+=";\r\n"
+  // code+="}\r\n"
   
   // 必要的函数重写
   code+=" override public function init():void{super.init();\r\n"
