@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<engine>
+	<!-- ****************************** -->
+	<!-- ********** 系统设置 *********** -->
+	<!-- ****************************** -->
+
+	<!-- 游戏速率,1为正常，2为2倍，用整数 -->
+	<property key="game_speed" value="1" />
+
+	<!-- 第一层地面的高度 -->
+	<property key="game_floor_height" value="15" />
+
+	<!-- ****************************** -->
+	<!-- ********** 神马设置 *********** -->
+	<!-- ****************************** -->
+
+	<!-- 玩家碰撞敌人鸡后的冻结毫秒数,这段时间神马不能起飞或者跳 -->
+	<property key="player_frozeen_after_collide_enemy" value="350" />
+
+	<!-- 玩家的最大速率 -->
+	<property key="player_max_speed" value="50" />
+
+	<!-- 玩家无敌时的加速度 -->
+	<property key="player_zool_add_speed" value="-10" />
+
+	<!-- 玩家的重力 -->
+	<property key="player_gx" value="0" />
+	<property key="player_gy" value="0.8" />
+
+	<!-- 玩家正常的弹力 -->
+	<property key="player_bounce_x" value="0" />
+	<property key="player_bounce_y" value="-18" />
+
+	<!-- 玩家鼠标按下是递增的弹力 -->
+	<property key="player_mousedown_bounce_x" value="0" />
+	<property key="player_mousedown_bounce_y" value="-0.18" />
+
+
+	<!-- ****************************** -->
+	<!-- ****** 道具和敌人设置 ********* -->
+	<!-- ****************************** -->
+
+	<!-- 普通苹果的碰撞半径 -->
+	<property key="radius_common_apple" value="25" />
+
+	<!-- +2苹果的碰撞半径 -->
+	<property key="radius_multi_apple" value="20" />
+
+	<!-- 普通敌人的碰撞半径 -->
+	<property key="radius_common_enemy" value="27" />
+
+	<!-- 中等敌人的碰撞半径 -->
+	<property key="radius_middle_enemy" value="30" />
+
+	<!-- 高等敌人的碰撞半径 -->
+	<property key="radius_senior_enemy" value="35" />
+
+	<!-- 无敌的碰撞半径 -->
+	<property key="radius_zool_prop" value="30" />
+
+	<!-- 吸铁石的碰撞半径 -->
+	<property key="radius_magnet_prop" value="30" />
+
+	<!-- 装备吸铁石后，吸铁石出现的帧频间隔 30=1秒 -->
+	<property key="magnetIntervalFrame" value="300" />
+
+	<!-- 吸铁石的持续时间 毫秒数-->
+	<property key="magnetContinuedTime" value="5000" />
+	
+	<!-- 吸铁石的冷却时间 毫秒数-->
+	<property key="magnetFrozenTime" value="16000" />
+
+
+
+	<!-- ****************************** -->
+	<!-- ********** 奖励设置 *********** -->
+	<!-- ****************************** -->
+	<!-- 吃普通苹果的得分 -->
+	<property key="bouns_common_apple" value="2" />
+
+	<!-- 吃+2苹果的得分 -->
+	<property key="bouns_multi_apple" value="4" />
+
+	<!-- 吃大苹果的得分 -->
+	<property key="bouns_big_apple" value="10" />
+
+
+
+
+</engine>

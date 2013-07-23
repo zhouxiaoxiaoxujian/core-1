@@ -1,0 +1,12 @@
+<config>
+	<resourcePath root="../asset/"/>
+	<resources path="res">
+		<!--  
+		<resource name="horse" src="res_horse_dev.swf" type="swf" weight="0" relateList="base"/>
+		-->
+		<resource name="horse" src="res_horse.swf" type="swf" weight="0" relateList="base"/>
+		
+		<resource name="lang" src="lang.xml" type="txt" weight="0" relateList="base"/>
+		<resource name="engine" src="engine.xml" type="txt" weight="0" relateList="base"/>
+	</resources>
+</config>

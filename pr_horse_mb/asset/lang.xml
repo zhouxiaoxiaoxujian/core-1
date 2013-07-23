@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<lang name="zh-CN" ver="2008.6.9">
+		<node name="system">
+			<text label="sys_loading">正在加载...</text>
+			<text label="sys_if_exit">真的不玩了？</text>
+			<text label="btn_ok">确定</text>
+			<text label="btn_cancel">取消</text>
+		</node>
+		<node name="selectView">
+			<text label="select_total_distance_desc">总距离</text>
+		</node>
+		<node name="shop">
+			<text label="shop_item1_normal">更多的苹果！</text>
+			<text label="shop_item2_normal">更强的触地弹力！</text>
+			<text label="shop_item3_normal">抵御邪恶势力的撞击！</text>
+			<text label="shop_item4_normal">道具4</text>
+			<text label="shop_item5_normal">强力吸收！</text>
+			<text label="shop_item6_normal">道具6</text>
+
+			<text label="shop_item1_selected">卸载该道具</text>
+			<text label="shop_item2_selected">卸载该道具</text>
+			<text label="shop_item3_selected">卸载该道具</text>
+			<text label="shop_item4_selected">卸载该道具</text>
+			<text label="shop_item5_selected">卸载该道具</text>
+			<text label="shop_item6_selected">卸载该道具</text>
+
+			<text label="shop_default_tip">点击下面的图标，可以选择道具哦！</text>
+
+			<text label="shop_need_fly_distance">需要飞行</text>
+		</node>
+
+		<node name="game">
+			<text label="game_pause_tip">游戏暂停，点击任意处继续游戏</text>
+
+			<text label="game_apples">苹果</text>
+			<text label="game_power">能量</text>
+			<text label="game_score">最高分 : </text>
+		</node>
+
+		<node name="gameover">
+			<text label="gameover_score">本局得分</text>
+			<text label="gameover_distance">飞行距离</text>
+			<text label="gameover_time">飞行时间</text>
+			<text label="gameover_bring_down_point">击落敌人</text>
+
+			<text label="gameover_tip">再来一局！</text>
+		</node>
+	</lang>
+
+
+
+	<lang name="en" ver="2008.6.9">
+		<node name="system">
+			<text label="sys_loading">loading...</text>
+			<text label="sys_if_exit">Are you sure to exit?</text>
+			<text label="btn_ok">Ok</text>
+			<text label="btn_cancel">Cancel</text>
+		</node>
+		<node name="selectView">
+			<text label="select_total_distance_desc">Total Distance</text>
+		</node>
+		<node name="shop">
+			<text label="shop_item1_normal">More Apples #n#</text>
+			<text label="shop_item2_normal">Better Bounce #n#</text>
+			<text label="shop_item3_normal">Armor #n#</text>
+			<text label="shop_item4_normal">prop4</text>
+			<text label="shop_item5_normal"> &&&&&&&&&&&&& </text>
+			<text label="shop_item6_normal">prop6</text>
+
+			<text label="shop_item1_selected">deselect it</text>
+			<text label="shop_item2_selected">deselect it</text>
+			<text label="shop_item3_selected">deselect it</text>
+			<text label="shop_item4_selected">deselect it</text>
+			<text label="shop_item5_selected">deselect it</text>
+			<text label="shop_item6_selected">deselect it</text>
+
+			<text label="shop_default_tip">Welcome to Shop ^_^</text>
+			<text label="shop_need_fly_distance">need fly more</text>
+		</node>
+
+		<node name="game">
+			<text label="game_pause_tip">PAUSE #n# click anywhere game will resume  </text>
+
+			<text label="game_apples">APPLES</text>
+			<text label="game_power">POWER</text>
+			<text label="game_score">Best Score : </text>
+		</node>
+
+		<node name="gameover">
+			<text label="gameover_score">Score</text>
+			<text label="gameover_distance">Distance</text>
+			<text label="gameover_time">Time</text>
+			<text label="gameover_bring_down_point">Catch Count</text>
+
+			<text label="gameover_tip">Once Again!</text>
+		</node>
+	</lang>
+</root>
