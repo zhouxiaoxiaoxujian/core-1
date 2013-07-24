@@ -24,81 +24,25 @@ package
 
 			// 自适应屏幕方案
 			stage.scaleMode = StageScaleMode.NO_SCALE;
-			stage.align = StageAlign.TOP_LEFT; 
+			stage.align = StageAlign.TOP_LEFT;
 			stage.frameRate = 30;
-			super(gameStart, AndroidGameWorld); 
+			super(gameStart, AndroidGameWorld);
 		}
 
-		private function gameStart():void
+		private function gameStart() : void
 		{
-
-			PlatformAdapter.getIns().init(PlatformAdapter.ANDROID_APPCHINA, function():void
+			PlatformAdapter.getIns().init(PlatformAdapter.ANDROID_APPCHINA, function() : void
 			{
-//				Global.gameWorld.advEnable = true;  
-
 				// PopupManager.getInstance().showTopPanel(Loading_POP);
 				SceneManager.getInstance().changeScene(SelectScene);
-//				Scheduler.getIns().run(); 
-			}); 
+			});
 		}
-
-
-
-		// ======================================================
-		// Context3D层
-		// ======================================================
-//
-//		private var mStarling:Starling;
-//
-//		public function startup3D():void
-//		{
-//			Starling.multitouchEnabled = false; // useful on mobile devices
-//			Starling.handleLostContext = true; // deactivate on mobile devices (to save memory)
-//
-//			mStarling = new Starling(StManager, stage);
-//			mStarling.simulateMultitouch = false;
-//			mStarling.enableErrorChecking = false;
-//			mStarling.start();
-//
-//			stage.stage3Ds[0].addEventListener("context3DCreate", onContextCreated);
-//		}
-//
-//		private function onContextCreated(event:*):void
-//		{
-//			if (Starling.context.driverInfo.toLowerCase().indexOf("software") != -1)
-//			{
-//				trace("WARNING: 软件渲染模式");
-//				Starling.current.nativeStage.frameRate = 30;
-//			}
-//
-//
-//			PlatformAdapter.getIns().init(PlatformAdapter.ANDROID_APPCHINA, function():void
-//			{
-//				Global.gameWorld.advEnable = true;
-//
-//				// PopupManager.getInstance().showTopPanel(Loading_POP);
-//				SceneManager.getInstance().changeScene(SelectScene);
-//
-////				Scheduler.getIns().schedule(new TraceTask, 5000, 1000, 3000);
-//			});
-//
-//
-//		}
-
-
-
-
 
 
 		// ========================================================
 		// 					调试
 		// ========================================================
-
-
-
-
-
-		private function traceDebug():void
+		private function traceDebug() : void
 		{
 			trace("Capabilities.serverString", Capabilities.serverString);
 			trace("Capabilities.screenResolutionX", Capabilities.screenResolutionX);

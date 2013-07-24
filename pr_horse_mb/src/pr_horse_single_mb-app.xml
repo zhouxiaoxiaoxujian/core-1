@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
-<application xmlns="http://ns.adobe.com/air/application/3.1">
+<application xmlns="http://ns.adobe.com/air/application/3.5">
 
 	<!-- Adobe AIR Application Descriptor File Template. Specifies parameters 
 		for identifying, installing, and launching AIR applications. xmlns - The 
@@ -12,7 +12,9 @@
 		all AIR applications. Using a reverse DNS-style name as the id is recommended. 
 		(Eg. com.example.ExampleApplication.) Required. -->
 		<!-- pr.horse.single com.gamevil.zenonia2-->
-	<id>pr.horse.single</id>
+	<!-- <id>pr.horse.single</id> -->
+	<id>com.gamevil.zenonia2</id>
+
 
 	<!-- Used as the filename for the application. Required. -->
 	<filename>HorseGo</filename>
@@ -226,14 +228,6 @@
 		的 NetworkInfo API-->
 			    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 			    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
-			    
-			    <!-- -->
-			    <application android:enabled="true">
-					<activity android:name="com.google.ads.AdActivity" android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
-				</application>
-				
-
-				
 			</manifest>
 			
 		]]></manifestAdditions>
@@ -248,8 +242,12 @@
 		]]></InfoAdditions>
 		<requestedDisplayResolution>high</requestedDisplayResolution>
 	</iPhone>
+	<!-- 
 	<extensions>
 		<extensionID>com.hdi.nativeExtensions.NativeAds</extensionID>
 	</extensions>
-
+ -->
+<extensions>
+        <extensionID>com.hdi.nativeExtensions.NativeAds</extensionID>
+    </extensions>
 </application>
