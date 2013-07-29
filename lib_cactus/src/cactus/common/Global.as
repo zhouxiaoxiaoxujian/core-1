@@ -1,7 +1,7 @@
 package cactus.common
 {
 	import cactus.common.tools.util.Debugger;
-	
+
 	import flash.display.Stage;
 	import flash.system.Capabilities;
 
@@ -11,11 +11,11 @@ package cactus.common
 		 * 数据中心的URL
 		 * @default
 		 */
-		public static var dataCenterURL:String;
+		public static var dataCenterURL : String;
 
-		public static var stage:Stage;
+		public static var stage : Stage;
 
-		public static var gameWorld:*;
+		public static var gameWorld : *;
 
 		// =========================================
 		// ============  加载模式		============
@@ -25,17 +25,17 @@ package cactus.common
 		 * 程序运行模式
 		 * @default
 		 */
-		public static var mode:int = -1;
+		public static var mode : int = -1;
 		/**
 		 * 普通单文件模式
 		 * @default
 		 */
-		public static const MODE_SINGLE:int = 1;
+		public static const MODE_SINGLE : int = 1;
 		/**
 		 * 普通多文件模式
 		 * @default
 		 */
-		public static const MODE_MULTI:int = 2;
+		public static const MODE_MULTI : int = 2;
 
 		// =========================================
 		// ============  运行平台		============
@@ -45,48 +45,48 @@ package cactus.common
 		 * 运行平台
 		 * @default
 		 */
-		public static var platform:int = 0;
+		public static var platform : int = 0;
 
 		/**
 		 * PC平台
 		 * @default
 		 */
-		public static const PLATFORM_PC:int = 1;
-		public static const PLATFORM_ANDROID:int = 2;
-		public static const PLATFORM_IOS:int = 3;
+		public static const PLATFORM_PC : int = 1;
+		public static const PLATFORM_ANDROID : int = 2;
+		public static const PLATFORM_IOS : int = 3;
 
 		/**
 		 * 是否为PC
-		 * @return 
+		 * @return
 		 */
-		public static function isPC():Boolean
+		public static function isPC() : Boolean
 		{
 			return platform == PLATFORM_PC;
 		}
 
 		/**
 		 * 是否为移动设备
-		 * @return 
+		 * @return
 		 */
-		public static function isMobile():Boolean
+		public static function isMobile() : Boolean
 		{
 			return (platform == PLATFORM_IOS) || (platform == PLATFORM_ANDROID);
 		}
 
 		/**
 		 * 是否为安卓
-		 * @return 
+		 * @return
 		 */
-		public static function isAndroid():Boolean
+		public static function isAndroid() : Boolean
 		{
 			return platform == PLATFORM_ANDROID;
 		}
 
 		/**
 		 * 是否为IOS
-		 * @return 
+		 * @return
 		 */
-		public static function isIOS():Boolean
+		public static function isIOS() : Boolean
 		{
 			return platform == PLATFORM_IOS;
 		}
@@ -95,13 +95,13 @@ package cactus.common
 		// ============  平台相关		============
 		// =========================================
 
-		public static var originalScreenW:Number;
+		public static var originalScreenW : Number;
 
-		public static var originalScreenH:Number;
+		public static var originalScreenH : Number;
 
-		public static var screenW:Number;
+		public static var screenW : Number;
 
-		public static var screenH:Number;
+		public static var screenH : Number;
 
 
 
@@ -116,13 +116,14 @@ package cactus.common
 		 * @param $reverseMobile	是否翻转手机的默认方向	true代表宽度要大于高度
 		 * @param $manufacturer		平台，默认为null，应该由程序捕捉。但ADL中可能存在错误，需要手动设置
 		 */
-		public static function initCapabilities($originalScreenW:Number, $originalScreenH:Number, $reverseMobile:Boolean = false, $manufacturer:String = null):void
+		public static function initCapabilities($originalScreenW : Number, $originalScreenH : Number, $reverseMobile : Boolean =
+			false, $manufacturer : String = null) : void
 		{
 			// 如果不是移动平台，则使用传入的宽高
 			originalScreenW = screenW = $originalScreenW;
 			originalScreenH = screenH = $originalScreenH;
 
-			var manufacturer:String = $manufacturer || Capabilities.manufacturer;
+			var manufacturer : String = $manufacturer || Capabilities.manufacturer;
 			if (manufacturer.toLowerCase().indexOf("android") != -1)
 			{
 //				screenW = ($reverseMobile == false) ? stage.stageWidth : stage.stageHeight;
@@ -147,14 +148,14 @@ package cactus.common
 				screenH = stage.stageHeight;
 			}
 
-			Debugger.warn("screenW", screenW, "screenH", screenH);
+			Debugger.warn("screenW", screenW, "screenH", screenH, "originalScreenW", originalScreenW, "originalScreenH", originalScreenH);
 			Debugger.warn("stage width", stage.stageWidth, "stage height", stage.stageHeight);
 		}
 
 		/**
 		 * 屏幕的高度缩放比例
 		 */
-		public static function heightRatio():Number
+		public static function heightRatio() : Number
 		{
 			return originalScreenH / screenH;
 		}
@@ -162,7 +163,7 @@ package cactus.common
 		/**
 		 * 屏幕的宽度缩放比例
 		 */
-		public static function widthRatio():Number
+		public static function widthRatio() : Number
 		{
 			return originalScreenW / screenW;
 		}
@@ -172,7 +173,7 @@ package cactus.common
 		 * @param originalY
 		 * @return
 		 */
-		public static function mapToScreenX(originalX:Number):Number
+		public static function mapToScreenX(originalX : Number) : Number
 		{
 			return originalX / originalScreenW * screenW;
 		}
@@ -182,7 +183,7 @@ package cactus.common
 		 * @param originalY
 		 * @return
 		 */
-		public static function mapToScreenY(originalY:Number):Number
+		public static function mapToScreenY(originalY : Number) : Number
 		{
 			return originalY / originalScreenH * screenH;
 		}
@@ -192,7 +193,7 @@ package cactus.common
 		 * @param iWidth
 		 * @return
 		 */
-		public static function mapToWidth(iWidth:Number):Number
+		public static function mapToWidth(iWidth : Number) : Number
 		{
 			return mapToScreenX(iWidth);
 		}
@@ -202,17 +203,17 @@ package cactus.common
 		 * @param iHeight
 		 * @return
 		 */
-		public static function mapToHeight(iHeight):Number
+		public static function mapToHeight(iHeight) : Number
 		{
 			return mapToScreenY(iHeight);
 		}
 
-		public static function isSingleMode():Boolean
+		public static function isSingleMode() : Boolean
 		{
 			return mode == MODE_SINGLE;
 		}
 
-		public static function isMultiMode():Boolean
+		public static function isMultiMode() : Boolean
 		{
 			return mode == MODE_MULTI;
 		}
