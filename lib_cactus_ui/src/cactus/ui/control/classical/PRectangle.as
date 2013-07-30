@@ -81,7 +81,7 @@ package cactus.ui.control.classical
 					_text.text = value.toString();
 				}
 
-				_text.text += ":" + getRenderIndex() + ":" + getDataIndex();
+				_text.appendText(":" + getRenderIndex() + ":" + getDataIndex());
 			}
 		}
 
