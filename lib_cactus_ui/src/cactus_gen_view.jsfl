@@ -88,7 +88,7 @@ function createBaseClass(postFix){
   createImports()
   
   var baseClassName = (postFix == ui)? "PAutoView" : "BasePopupPanel";
-  code+="public class "+$class+" extends "+baseClassName+"{\r\n\r\n"
+  code+="internal class "+$class+" extends "+baseClassName+"{\r\n\r\n"
 
   // 创建Bindable的变量,将所有绑定变量写入一个数组bindArray，以便后面使用
   createVars()
