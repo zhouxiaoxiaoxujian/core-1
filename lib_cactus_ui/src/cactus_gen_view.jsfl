@@ -105,16 +105,14 @@ function createBaseClass(postFix){
   
   // 必要的函数重写
   code+=" override public function init():void{super.init();\r\n"
-  createAddEvent()
+ 
   code+="}\r\n"
   
   code+=" override public function destory():void{super.destory();\r\n"
-  createRemoveEvent()
+  
   code+="}\r\n"
   
   code+=" override public function fireDataChange():void{super.fireDataChange();}\r\n"
-
-  createEventHandler();
 
   code+="}}\r\n"
 
@@ -286,7 +284,14 @@ function createImplClass(postFix){
   code="";
   code="package {\r\n"
   
+  code+="import flash.events.Event;\r\n"
+  code+="import flash.events.MouseEvent;\r\n"
+  code+="import cactus.ui.bind.PAutoView;\r\n"
   code+="import cactus.ui.control.*;\r\n"
+  code+="import cactus.ui.base.BasePopupPanel;\r\n"
+  code+="import flash.display.MovieClip;\r\n"
+  code+="import flash.text.TextField;\r\n\r\n"  
+  
   
   childClassName = processChildClassName($class); 		
   code+="public class "+childClassName+" extends "+$class+"{\r\n\r\n"
@@ -295,18 +300,19 @@ function createImplClass(postFix){
   code+="\r\npublic function "+childClassName+"(src:*=null){super(\""+$class+"\")}\r\n\r\n"
   
   // 必要的函数重写
-  code+=" override public function init():void{\r\n"
-  code+="// must call super\r\n" 
-  code+="super.init();\r\n"
+  code+=" override public function init():void{super.init();\r\n"
+  code+="       // must call super\r\n"
+  createAddEvent()
   code+="}\r\n"
   
-  code+=" override public function destory():void{\r\n"
-  code+="// must call super\r\n" 
-  code+="super.destory();\r\n"
+  code+=" override public function destory():void{super.destory();\r\n"
+  code+="       // must call super\r\n"
+  createRemoveEvent()
   code+="}\r\n"
   
-  code+=" override public function fireDataChange():void{}\r\n"
+  code+=" override public function fireDataChange():void{super.fireDataChange();}\r\n"
 
+  createEventHandler();
   code+="}}\r\n"
 
 } // createImplClass
